@@ -1,0 +1,9 @@
+{
+    "id" : "VolcanoGiants",
+    "version" : "0.1.0-SNAPSHOT",
+    "author" : "VaibhavBajaj",
+    "displayName" : "VolcanoGiants",
+    "description" : "A world filled with huge volcanos and lava lakes.\n Recommended module: DamagingBlocks",
+    "dependencies" : [{"id": "engine", "minVersion": "1.0.0"}, {"id": "Core", "minVersion": "1.3.1"}],
+    "serverSideOnly" : false
+}
