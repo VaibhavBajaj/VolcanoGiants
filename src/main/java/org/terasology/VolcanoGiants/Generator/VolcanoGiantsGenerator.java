@@ -1,6 +1,7 @@
 package org.terasology.VolcanoGiants.Generator;
 
-import org.terasology.VolcanoGiants.FacetProvider.*;
+import org.terasology.VolcanoGiants.FacetProvider.SurfaceProvider;
+import org.terasology.VolcanoGiants.FacetProvider.VolcanoProvider;
 import org.terasology.VolcanoGiants.Rasterizer.VolcanoGiantsRasterizer;
 import org.terasology.engine.SimpleUri;
 import org.terasology.registry.In;
@@ -25,7 +26,6 @@ public class VolcanoGiantsGenerator extends BaseFacetedWorldGenerator{
         return new WorldBuilder(worldGeneratorPluginLibrary)
                 .addProvider(new SurfaceProvider())
                 .addProvider(new VolcanoProvider())
-                .addProvider(new VolcanoHeightProvider())
                 .addProvider(new SeaLevelProvider(0))
                 .addRasterizer(new VolcanoGiantsRasterizer());
     }
