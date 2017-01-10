@@ -1,5 +1,6 @@
 package org.terasology.VolcanoGiants.Rasterizer;
 
+import org.terasology.VolcanoGiants.FacetProvider.VolcanoProvider;
 import org.terasology.math.ChunkMath;
 import org.terasology.math.geom.Vector3i;
 import org.terasology.registry.CoreRegistry;
@@ -9,7 +10,6 @@ import org.terasology.world.chunks.CoreChunk;
 import org.terasology.world.generation.Region;
 import org.terasology.world.generation.WorldRasterizer;
 import org.terasology.world.generation.facets.SurfaceHeightFacet;
-import org.terasology.VolcanoGiants.FacetProvider.VolcanoProvider;
 
 public class VolcanoGiantsRasterizer implements WorldRasterizer {
 
@@ -17,7 +17,7 @@ public class VolcanoGiantsRasterizer implements WorldRasterizer {
     private Block stone;
     private Block lava;
     private Block hardStone;
-    private VolcanoProvider volcanoProvider;
+    private int maxMountainHeight = VolcanoProvider.maxMountainHeight;
 
     @Override
     public void initialize() {
@@ -36,10 +36,10 @@ public class VolcanoGiantsRasterizer implements WorldRasterizer {
 
             float surfaceHeight = surfaceHeightFacet.getWorld(position.x, position.z);
 
-            if (position.getY() >= volcanoProvider.getMountainHeight() - 30) {
+            if (position.getY() >= (0.75 * maxMountainHeight)) {
                 chunk.setBlock(ChunkMath.calcBlockPos(position), air);
             }
-            if (position.getY() < surfaceHeight - 5) {
+            else if (position.getY() < surfaceHeight - 5) {
                 chunk.setBlock(ChunkMath.calcBlockPos(position), lava);
             } else if (position.getY() < surfaceHeight - 1) {
                 chunk.setBlock(ChunkMath.calcBlockPos(position), hardStone);

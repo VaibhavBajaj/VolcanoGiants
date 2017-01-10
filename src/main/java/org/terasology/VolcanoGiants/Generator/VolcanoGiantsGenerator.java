@@ -14,6 +14,7 @@ import org.terasology.core.world.generator.facetProviders.SeaLevelProvider;
 
 @RegisterWorldGenerator(id = "volcanoGiants", displayName = "Volcano Giants")
 public class VolcanoGiantsGenerator extends BaseFacetedWorldGenerator{
+
     @In
     private WorldGeneratorPluginLibrary worldGeneratorPluginLibrary;
 
@@ -25,8 +26,8 @@ public class VolcanoGiantsGenerator extends BaseFacetedWorldGenerator{
     protected WorldBuilder createWorld() {
         return new WorldBuilder(worldGeneratorPluginLibrary)
                 .addProvider(new SurfaceProvider())
-                .addProvider(new VolcanoProvider())
                 .addProvider(new SeaLevelProvider(0))
+                .addProvider(new VolcanoProvider())
                 .addRasterizer(new VolcanoGiantsRasterizer());
     }
 }
