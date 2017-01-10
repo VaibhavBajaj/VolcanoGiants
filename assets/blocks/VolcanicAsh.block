@@ -1,0 +1,8 @@
+/**
+ * VolcanicAsh is a block that disappears from inventory after 1 minute
+ */
+{
+  "entity": {
+    "prefab": "VolcanicAsh"
+  }
+}

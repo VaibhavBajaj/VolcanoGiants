@@ -1,0 +1,12 @@
+{
+  "hardness": 0,
+  "water": true,
+  "attachmentAllowed": false,
+  "translucent": true,
+  "targetable": false,
+  "penetrable": true,
+  "shadowCasting": true,
+  "entity": {
+    "prefab": "poisonousSulphurGas"
+  }
+}

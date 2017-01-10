@@ -17,6 +17,8 @@ public class VolcanoGiantsRasterizer implements WorldRasterizer {
     private Block stone;
     private Block lava;
     private Block hardStone;
+    private Block volcanicAsh;
+
     private int maxMountainHeight = VolcanoProvider.maxMountainHeight;
 
     @Override
@@ -25,6 +27,7 @@ public class VolcanoGiantsRasterizer implements WorldRasterizer {
         stone = CoreRegistry.get(BlockManager.class).getBlock("Core:Stone");
         lava = CoreRegistry.get(BlockManager.class).getBlock("Core:Lava");
         hardStone = CoreRegistry.get(BlockManager.class).getBlock("Core:HardStone");
+        volcanicAsh = CoreRegistry.get(BlockManager.class).getBlock("VolcanoGiants:VolcanicAsh");
     }
 
     @Override
@@ -41,9 +44,17 @@ public class VolcanoGiantsRasterizer implements WorldRasterizer {
             }
             else if (position.getY() < surfaceHeight - 5) {
                 chunk.setBlock(ChunkMath.calcBlockPos(position), lava);
-            } else if (position.getY() < surfaceHeight - 1) {
+            } else if (position.getY() < surfaceHeight - 2) {
                 chunk.setBlock(ChunkMath.calcBlockPos(position), hardStone);
-            } else if (position.getY() < surfaceHeight) {
+            } else if (position.getY() < surfaceHeight && position.getY() > (0.2 * maxMountainHeight)) {
+                double rand = Math.random();
+                double heightRatio = (maxMountainHeight - surfaceHeight)/ ((float) maxMountainHeight);
+                if(rand < heightRatio)
+                    chunk.setBlock(ChunkMath.calcBlockPos(position), stone);
+                else
+                    chunk.setBlock(ChunkMath.calcBlockPos(position), volcanicAsh);
+            }
+            else if (position.getY() < surfaceHeight) {
                 chunk.setBlock(ChunkMath.calcBlockPos(position), stone);
             }
         }
