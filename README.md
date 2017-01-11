@@ -4,12 +4,17 @@
 This is a beautiful world with sweet fairies and candy everywhere.... No.
 
 A world mimicking the Underworld itself, it is the true definition of "Hell on Earth"!
-It is characterized by sky-high volcanoes with lava veins flowing down their accursed grounds!
-![Hell On Earth](https://puu.sh/th7GS/2c62efd247.png)
 
-When on top, you can see nought but dust, stone and lava.
+1000 years hence, the sky turned red and yellow and demonic gods ascended to Earth. Once the smoke cleared, this world remained. Sky-high volcanoes with lava veins flowing down their accursed grounds now populate this land.
+![Hell On Earth](https://puu.sh/tibL5/51ff0fe44f.png)
 
-![Hopeless Nightmare](https://puu.sh/th86f/5b65a596f4.png)
+On the top of the volcanoes, you can see nought but volcanic ash, dust, stone and lava and breathe nought but poisonous gas.
+
+![Hopeless Nightmare](https://puu.sh/tibVk/a7061d4446.png)
+
+However, even here lie hidden gems buried behind solid rock
+
+![Streak of hope](https://puu.sh/tic1k/8b0b4bf1b3.png)
 
 Don't dig to deep or you shall plummet to your lamented death from hellish Lava!
 

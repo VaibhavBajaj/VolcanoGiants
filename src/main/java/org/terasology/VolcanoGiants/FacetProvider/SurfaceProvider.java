@@ -1,4 +1,4 @@
-package org.terasology.VolcanoGiants.world.FacetProvider;
+package org.terasology.VolcanoGiants.FacetProvider;
 
 import org.terasology.math.geom.Vector2f;
 import org.terasology.math.geom.BaseVector2i;

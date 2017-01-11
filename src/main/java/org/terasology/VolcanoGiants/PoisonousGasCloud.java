@@ -1,4 +1,4 @@
-package org.terasology.VolcanoGiants.world;
+package org.terasology.VolcanoGiants;
 
 public class PoisonousGasCloud {
 

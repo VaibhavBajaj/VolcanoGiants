@@ -1,10 +1,10 @@
-package org.terasology.VolcanoGiants.world.Generator;
+package org.terasology.VolcanoGiants.Generator;
 
-import org.terasology.VolcanoGiants.world.FacetProvider.VolcanoProvider;
-import org.terasology.VolcanoGiants.world.FacetProvider.GasCloudProvider;
-import org.terasology.VolcanoGiants.world.FacetProvider.SurfaceProvider;
-import org.terasology.VolcanoGiants.world.Rasterizer.GasCloudRasterizer;
-import org.terasology.VolcanoGiants.world.Rasterizer.VolcanoGiantsRasterizer;
+import org.terasology.VolcanoGiants.FacetProvider.GasCloudProvider;
+import org.terasology.VolcanoGiants.Rasterizer.GasCloudRasterizer;
+import org.terasology.VolcanoGiants.FacetProvider.VolcanoProvider;
+import org.terasology.VolcanoGiants.FacetProvider.SurfaceProvider;
+import org.terasology.VolcanoGiants.Rasterizer.VolcanoGiantsRasterizer;
 import org.terasology.engine.SimpleUri;
 import org.terasology.registry.In;
 import org.terasology.world.generation.BaseFacetedWorldGenerator;

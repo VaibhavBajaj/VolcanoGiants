@@ -1,6 +1,6 @@
-package org.terasology.VolcanoGiants.world.Rasterizer;
+package org.terasology.VolcanoGiants.Rasterizer;
 
-import org.terasology.VolcanoGiants.world.FacetProvider.VolcanoProvider;
+import org.terasology.VolcanoGiants.FacetProvider.VolcanoProvider;
 import org.terasology.math.ChunkMath;
 import org.terasology.math.geom.Vector3i;
 import org.terasology.registry.CoreRegistry;

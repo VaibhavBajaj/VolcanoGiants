@@ -1,7 +1,7 @@
-package org.terasology.VolcanoGiants.world.FacetProvider;
+package org.terasology.VolcanoGiants.FacetProvider;
 
-import org.terasology.VolcanoGiants.world.Facet.GasCloudFacet;
-import org.terasology.VolcanoGiants.world.PoisonousGasCloud;
+import org.terasology.VolcanoGiants.Facet.GasCloudFacet;
+import org.terasology.VolcanoGiants.PoisonousGasCloud;
 import org.terasology.math.TeraMath;
 import org.terasology.math.geom.Rect2i;
 import org.terasology.utilities.procedural.Noise;

@@ -1,9 +1,9 @@
-package org.terasology.VolcanoGiants.world.Rasterizer;
+package org.terasology.VolcanoGiants.Rasterizer;
 
 import java.util.Map.Entry;
 
-import org.terasology.VolcanoGiants.world.Facet.GasCloudFacet;
-import org.terasology.VolcanoGiants.world.PoisonousGasCloud;
+import org.terasology.VolcanoGiants.Facet.GasCloudFacet;
+import org.terasology.VolcanoGiants.PoisonousGasCloud;
 import org.terasology.math.ChunkMath;
 import org.terasology.math.Region3i;
 import org.terasology.math.geom.BaseVector3i;

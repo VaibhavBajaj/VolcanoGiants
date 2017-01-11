@@ -1,4 +1,4 @@
-package org.terasology.VolcanoGiants.world.FacetProvider;
+package org.terasology.VolcanoGiants.FacetProvider;
 
 import org.slf4j.LoggerFactory;
 import org.terasology.math.TeraMath;
