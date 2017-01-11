@@ -1,6 +1,6 @@
-package org.terasology.VolcanoGiants.Rasterizer;
+package org.terasology.VolcanoGiants.world.Rasterizer;
 
-import org.terasology.VolcanoGiants.FacetProvider.VolcanoProvider;
+import org.terasology.VolcanoGiants.world.FacetProvider.VolcanoProvider;
 import org.terasology.math.ChunkMath;
 import org.terasology.math.geom.Vector3i;
 import org.terasology.registry.CoreRegistry;
@@ -18,6 +18,7 @@ public class VolcanoGiantsRasterizer implements WorldRasterizer {
     private Block lava;
     private Block hardStone;
     private Block volcanicAsh;
+    private Block diamondOre;
 
     private int maxMountainHeight = VolcanoProvider.maxMountainHeight;
 
@@ -28,6 +29,7 @@ public class VolcanoGiantsRasterizer implements WorldRasterizer {
         lava = CoreRegistry.get(BlockManager.class).getBlock("Core:Lava");
         hardStone = CoreRegistry.get(BlockManager.class).getBlock("Core:HardStone");
         volcanicAsh = CoreRegistry.get(BlockManager.class).getBlock("VolcanoGiants:VolcanicAsh");
+        diamondOre = CoreRegistry.get(BlockManager.class).getBlock("Core:DiamondOre");
     }
 
     @Override
@@ -45,17 +47,28 @@ public class VolcanoGiantsRasterizer implements WorldRasterizer {
             else if (position.getY() < surfaceHeight - 5) {
                 chunk.setBlock(ChunkMath.calcBlockPos(position), lava);
             } else if (position.getY() < surfaceHeight - 2) {
-                chunk.setBlock(ChunkMath.calcBlockPos(position), hardStone);
-            } else if (position.getY() < surfaceHeight && position.getY() > (0.2 * maxMountainHeight)) {
+
                 double rand = Math.random();
-                double heightRatio = (maxMountainHeight - surfaceHeight)/ ((float) maxMountainHeight);
+                /*Start spawning diamond ore at 0.63 * maxMountainHeight.
+                * As height increases, increase occurrence.
+                */
+                double heightRatio = ((-1 * 0.63 * maxMountainHeight) + surfaceHeight)/ ((float) maxMountainHeight);
+
                 if(rand < heightRatio)
-                    chunk.setBlock(ChunkMath.calcBlockPos(position), stone);
+                    chunk.setBlock(ChunkMath.calcBlockPos(position), diamondOre);
                 else
+                    chunk.setBlock(ChunkMath.calcBlockPos(position), hardStone);
+            } else if (position.getY() < surfaceHeight) {
+                double rand = Math.random();
+                /*Start spawning volcanic ash at 0.2 * maxMountainHeight.
+                * As height increases, increase occurrence.
+                */
+                double heightRatio = ((-1 * 0.2 * maxMountainHeight) + surfaceHeight)/ ((float) maxMountainHeight);
+
+                if(rand < heightRatio)
                     chunk.setBlock(ChunkMath.calcBlockPos(position), volcanicAsh);
-            }
-            else if (position.getY() < surfaceHeight) {
-                chunk.setBlock(ChunkMath.calcBlockPos(position), stone);
+                else
+                    chunk.setBlock(ChunkMath.calcBlockPos(position), stone);
             }
         }
     }

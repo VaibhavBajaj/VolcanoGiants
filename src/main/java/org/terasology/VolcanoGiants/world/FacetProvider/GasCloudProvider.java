@@ -1,13 +1,11 @@
-package org.terasology.VolcanoGiants.FacetProvider;
+package org.terasology.VolcanoGiants.world.FacetProvider;
 
-import org.terasology.VolcanoGiants.Facet.GasCloudFacet;
-import org.terasology.VolcanoGiants.PoisonousGasCloud;
-import org.terasology.math.Region3i;
+import org.terasology.VolcanoGiants.world.Facet.GasCloudFacet;
+import org.terasology.VolcanoGiants.world.PoisonousGasCloud;
 import org.terasology.math.TeraMath;
 import org.terasology.math.geom.Rect2i;
 import org.terasology.utilities.procedural.Noise;
 import org.terasology.utilities.procedural.WhiteNoise;
-import org.terasology.world.block.BlockManager;
 import org.terasology.world.generation.Produces;
 import org.terasology.world.generation.Requires;
 import org.terasology.world.generation.Facet;

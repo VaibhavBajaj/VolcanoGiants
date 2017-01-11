@@ -1,12 +1,12 @@
-package org.terasology.VolcanoGiants.FacetLayers;
+package org.terasology.VolcanoGiants.world.FacetLayers;
 
 import java.awt.Color;
 import java.awt.Graphics2D;
 import java.awt.image.BufferedImage;
 import java.util.Map.Entry;
 
-import org.terasology.VolcanoGiants.Facet.GasCloudFacet;
-import org.terasology.VolcanoGiants.PoisonousGasCloud;
+import org.terasology.VolcanoGiants.world.Facet.GasCloudFacet;
+import org.terasology.VolcanoGiants.world.PoisonousGasCloud;
 import org.terasology.math.geom.BaseVector3i;
 import org.terasology.math.geom.Rect2i;
 import org.terasology.math.geom.Vector2i;
