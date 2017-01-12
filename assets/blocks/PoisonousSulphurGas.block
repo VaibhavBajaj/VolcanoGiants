@@ -1,0 +1,16 @@
+{
+  "hardness": 0,
+  /*This is so that this block does the same damage as lava when lava is equipped*/
+  /* TODO: Change damageType to Poison when damageTypes are centralized */
+  "lava": true,
+  /*Make sure "water": true is after "lava": true or else the blocks will look like lava*/
+  "water": true,
+  "attachmentAllowed": false,
+  "translucent": true,
+  "targetable": false,
+  "penetrable": true,
+  "shadowCasting": true,
+  "entity": {
+    "prefab": "poisonousSulphurGas"
+  }
+}
